@@ -6,3 +6,4 @@
 - Docker
 - MongoDB Compass
 - Insommnia
+- DBeaver
