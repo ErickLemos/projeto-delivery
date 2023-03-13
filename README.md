@@ -7,3 +7,4 @@
 - MongoDB Compass
 - Insommnia
 - DBeaver
+- WSL 2 (Windows Subsystem Linux)
