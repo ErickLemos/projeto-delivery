@@ -20,21 +20,16 @@ public class SaldoService {
 
     public SaldoEntity adicionar(String id, BigDecimal saldoParaAdicionar) {
 
-        var saldoDoUsuario = saldoRepository.findById(id);
+        var saldoDoUsuario = saldoRepository.findById(id)
+                .orElseGet(() -> saldoRepository.save(
+                        SaldoEntity.builder()
+                                .id(id)
+                                .quantidade(BigDecimal.ZERO)
+                                .build()
+                ));
 
-        if (saldoDoUsuario.isEmpty()) {
-            var saldoNovo = new SaldoEntity();
-            saldoNovo.setId(id);
-            saldoNovo.setQuantidade(BigDecimal.ZERO);
-            saldoRepository.save(saldoNovo);
-        }
-
-        var saldoFinal = saldoDoUsuario.get().getQuantidade()
-                .add(saldoParaAdicionar);
-
-        saldoDoUsuario.get().setQuantidade(saldoFinal);
-
-        return saldoRepository.save(saldoDoUsuario.get());
+        saldoDoUsuario.adicionarSaldo(saldoParaAdicionar);
+        return saldoRepository.save(saldoDoUsuario);
 
     }
 
