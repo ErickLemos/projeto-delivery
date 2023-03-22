@@ -1,4 +1,4 @@
-package com.delivery.carteira.models;
+package com.delivery.carteira.models.entities;
 
 import lombok.Builder;
 import lombok.Data;
