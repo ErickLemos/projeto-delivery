@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 
 @RestController
-@RequestMapping("/saldo")
+@RequestMapping("/saldos")
 @RequiredArgsConstructor
 public class SaldoController {
 
