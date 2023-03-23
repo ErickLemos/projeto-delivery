@@ -1,11 +1,14 @@
 package com.delivery.carteira.controllers;
 
+import com.delivery.carteira.mappers.SaldoDtoMapper;
+import com.delivery.carteira.models.dtos.SaldoDto;
 import com.delivery.carteira.models.entities.SaldoEntity;
-import com.delivery.carteira.models.dtos.SaldoDtoRequest;
 import com.delivery.carteira.services.SaldoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
 
 @RestController
 @RequestMapping("/saldo")
@@ -25,14 +28,16 @@ public class SaldoController {
     }
 
     @PostMapping
-    public ResponseEntity<SaldoEntity> post(@RequestBody SaldoDtoRequest saldoDtoRequest) {
+    public ResponseEntity<SaldoDto> post(@RequestBody SaldoDto saldoDtoRequest) {
 
         var resultado = saldoService.adicionar(
                 saldoDtoRequest.getId(),
-                saldoDtoRequest.getQuantidade()
+                BigDecimal.valueOf(Long.parseLong(saldoDtoRequest.getQuantidade()))
         );
 
-        return ResponseEntity.ok(resultado);
+        var dto = SaldoDtoMapper.INSTANCE.mapFrom(resultado);
+
+        return ResponseEntity.ok(dto);
 
     }
 

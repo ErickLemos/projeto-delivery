@@ -1,7 +1,6 @@
 package com.delivery.carteira.models.entities;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,6 +8,8 @@ import java.math.BigDecimal;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Document("saldo_entity")
 public class SaldoEntity {
 
