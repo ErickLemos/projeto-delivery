@@ -35,9 +35,9 @@ public class SaldoController {
                 BigDecimal.valueOf(Long.parseLong(saldoDtoRequest.getQuantidade()))
         );
 
-        var dto = SaldoDtoMapper.INSTANCE.mapFrom(resultado);
-
-        return ResponseEntity.ok(dto);
+        return ResponseEntity.ok(
+                SaldoDtoMapper.INSTANCE.mapFrom(resultado)
+        );
 
     }
 
