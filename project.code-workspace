@@ -1,0 +1,19 @@
+{
+    "folders": [
+        {
+            "name": "projeto",
+            "path": "."
+        }
+    ],
+    "extensions": {
+        "recommendations": [
+            "ms-azuretools.vscode-docker",
+            "ms-vscode-remote.remote-containers",
+            "ms-kubernetes-tools.vscode-kubernetes-tools",
+            "ms-vscode-remote.remote-wsl",
+            "ms-vscode-remote.vscode-remote-extensionpack",
+            "redhat.vscode-yaml",
+            "PKief.material-icon-theme"
+        ]
+    }
+}
