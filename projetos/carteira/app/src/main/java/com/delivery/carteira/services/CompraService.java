@@ -9,6 +9,8 @@ import com.delivery.carteira.services.utilizarsaldo.UtilizarSaldoStrategyImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class CompraService {
@@ -30,7 +32,9 @@ public class CompraService {
     }
 
     private UtilizarSaldoStrategy buildUtilizarSaldo(Boolean valor) {
-        return valor ? utilizarSaldoStrategy : naoUtilizarSaldoStrategy;
+        return Optional.ofNullable(valor)
+                .map(obj -> valor ? utilizarSaldoStrategy : naoUtilizarSaldoStrategy)
+                .orElse(naoUtilizarSaldoStrategy);
     }
 
 }
