@@ -1,4 +1,4 @@
-package com.delivery.carteira.repositories.configurations;
+package com.delivery.carteira.repositories.config;
 
 import com.delivery.carteira.repositories.utils.UsuarioMetadata;
 import org.springframework.context.annotation.Bean;

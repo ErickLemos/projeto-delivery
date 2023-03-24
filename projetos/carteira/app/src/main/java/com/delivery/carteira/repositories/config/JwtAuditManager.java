@@ -1,7 +1,6 @@
-package com.delivery.carteira.repositories.configurations;
+package com.delivery.carteira.repositories.config;
 
 import com.delivery.carteira.repositories.utils.UsuarioMetadata;
-import com.delivery.carteira.utils.auth.Usuario;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
