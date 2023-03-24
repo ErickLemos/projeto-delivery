@@ -1,7 +1,7 @@
 _id: req_9e722a39bd5946a581ca0f7f6a30d28f
 type: Request
 parentId: fld_dc45d4b134e4441aba96edbb50044e71
-modified: 1679617798200
+modified: 1679680698512
 created: 1679617084458
 url: "{{ _.host_url }}/compras"
 name: Adicionar Compra
@@ -11,7 +11,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"valor": "100",
+    	"valor": "-200",
     	"metodo_de_pagamento": "dinheiro",
     	"tipo_de_compra": "pedido"
     }
@@ -19,7 +19,10 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-authentication: {}
+authentication:
+  type: bearer
+  token: "{% response 'body', 'req_a0c30a6389bf4dbcb48950e966cbfc79',
+    'b64::JC5pZFRva2Vu::46b', 'when-expired', 60 %}"
 metaSortKey: -1679617084458
 isPrivate: false
 settingStoreCookies: true

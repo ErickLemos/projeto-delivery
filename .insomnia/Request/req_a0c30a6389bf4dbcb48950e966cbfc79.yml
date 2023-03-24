@@ -1,0 +1,34 @@
+_id: req_a0c30a6389bf4dbcb48950e966cbfc79
+type: Request
+parentId: fld_b880541eac244add932077ec1dc24ceb
+modified: 1679673553057
+created: 1679670136150
+url: "{{ _.auth_url }}/accounts:signInWithPassword"
+name: Login
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "admin@gmail.com",
+    	"password": "123456789",
+    	"returnSecureToken": true
+    }
+parameters:
+  - id: pair_ea31d7957da048718866e899d55035f0
+    name: key
+    value: "{{ _.firebase_app_key }}"
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1679670136150
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
