@@ -1,4 +1,4 @@
-package com.delivery.carteira.services.utilizarsaldo;
+package com.delivery.carteira.services.interfaces;
 
 import com.delivery.carteira.domain.Compra;
 
