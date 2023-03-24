@@ -1,0 +1,21 @@
+_id: req_e27ade25bfe0432ab8f9bcbddd93962e
+type: Request
+parentId: fld_dc45d4b134e4441aba96edbb50044e71
+modified: 1679615564598
+created: 1679615445089
+url: "{{ _.host_url }}/saldos"
+name: Get Saldo
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1679615445089
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

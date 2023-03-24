@@ -1,0 +1,30 @@
+_id: req_9e722a39bd5946a581ca0f7f6a30d28f
+type: Request
+parentId: fld_dc45d4b134e4441aba96edbb50044e71
+modified: 1679617798200
+created: 1679617084458
+url: "{{ _.host_url }}/compras"
+name: Adicionar Compra
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"valor": "100",
+    	"metodo_de_pagamento": "dinheiro",
+    	"tipo_de_compra": "pedido"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1679617084458
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

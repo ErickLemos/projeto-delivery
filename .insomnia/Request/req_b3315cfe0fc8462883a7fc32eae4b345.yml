@@ -1,0 +1,29 @@
+_id: req_b3315cfe0fc8462883a7fc32eae4b345
+type: Request
+parentId: fld_dc45d4b134e4441aba96edbb50044e71
+modified: 1679615801444
+created: 1679615649315
+url: "{{ _.host_url }}/saldos/123"
+name: Adicionar Saldo
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"id": "123",
+    	"quantidade": "100"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1679615445039
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

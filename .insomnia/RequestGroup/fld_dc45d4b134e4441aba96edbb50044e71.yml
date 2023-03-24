@@ -1,0 +1,10 @@
+_id: fld_dc45d4b134e4441aba96edbb50044e71
+type: RequestGroup
+parentId: wrk_7ea23c2119cc42e7ac4fa0080027e81a
+modified: 1679615442702
+created: 1679615428938
+name: carteira
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1679615428938
