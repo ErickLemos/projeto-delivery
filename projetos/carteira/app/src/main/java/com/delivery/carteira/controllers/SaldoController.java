@@ -1,6 +1,6 @@
 package com.delivery.carteira.controllers;
 
-import com.delivery.carteira.mappers.SaldoDtoMapper;
+import com.delivery.carteira.controllers.mappers.SaldoDtoMapper;
 import com.delivery.carteira.controllers.dtos.SaldoDto;
 import com.delivery.carteira.services.SaldoService;
 import lombok.RequiredArgsConstructor;

@@ -1,9 +1,9 @@
-package com.delivery.carteira.mappers;
+package com.delivery.carteira.controllers.mappers;
 
 import com.delivery.carteira.domain.Compra;
-import com.delivery.carteira.mappers.commons.MetodoDePagamentoMapper;
+import com.delivery.carteira.utils.mappers.MetodoDePagamentoMapper;
 import com.delivery.carteira.controllers.dtos.CompraDto;
-import com.delivery.carteira.mappers.commons.TipoDeCompraMapper;
+import com.delivery.carteira.utils.mappers.TipoDeCompraMapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

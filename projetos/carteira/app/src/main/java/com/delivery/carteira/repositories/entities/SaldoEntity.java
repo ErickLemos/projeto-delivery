@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Document("saldo_entity")
+@Document("saldos")
 public class SaldoEntity {
 
     @Id

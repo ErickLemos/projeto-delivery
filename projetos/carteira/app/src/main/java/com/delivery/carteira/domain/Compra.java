@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 @Builder
 public class Compra {
 
+    private String id;
     private BigDecimal valor;
     private MetodoDePagamento metodoDePagamento;
     private TipoDeCompra tipoDeCompra;

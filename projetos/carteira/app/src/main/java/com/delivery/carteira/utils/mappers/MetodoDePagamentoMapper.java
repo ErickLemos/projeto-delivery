@@ -1,4 +1,4 @@
-package com.delivery.carteira.mappers.commons;
+package com.delivery.carteira.utils.mappers;
 
 import com.delivery.carteira.domain.enums.MetodoDePagamento;
 import org.mapstruct.Mapper;
