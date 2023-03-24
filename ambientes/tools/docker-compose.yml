@@ -11,7 +11,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 212M
+          memory: 512M
 
   jaeger:
     image: jaegertracing/all-in-one:latest
