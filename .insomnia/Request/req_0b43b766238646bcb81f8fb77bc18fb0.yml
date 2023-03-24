@@ -1,0 +1,33 @@
+_id: req_0b43b766238646bcb81f8fb77bc18fb0
+type: Request
+parentId: fld_b880541eac244add932077ec1dc24ceb
+modified: 1679671490694
+created: 1679671425762
+url: "{{ _.auth_url }}/accounts:signUp"
+name: Criar Usuario
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "admin2@gmail.com",
+    	"password": "123456789"
+    }
+parameters:
+  - id: pair_349cb4d8a4944a109539edef8f04eaa7
+    name: key
+    value: "{{ _.firebase_app_key }}"
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1679671425762
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
