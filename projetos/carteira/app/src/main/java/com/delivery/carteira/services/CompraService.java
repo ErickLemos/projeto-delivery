@@ -4,7 +4,7 @@ import com.delivery.carteira.domain.Compra;
 import com.delivery.carteira.repositories.CompraRepository;
 import com.delivery.carteira.repositories.mappers.CompraEntityMapper;
 import com.delivery.carteira.services.utilizarsaldo.NaoUtilizarSaldoStrategyImpl;
-import com.delivery.carteira.services.utilizarsaldo.UtilizarSaldoStrategy;
+import com.delivery.carteira.services.interfaces.UtilizarSaldoStrategy;
 import com.delivery.carteira.services.utilizarsaldo.UtilizarSaldoStrategyImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
