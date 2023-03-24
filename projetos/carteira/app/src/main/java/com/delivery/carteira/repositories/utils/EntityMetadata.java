@@ -1,6 +1,5 @@
 package com.delivery.carteira.repositories.utils;
 
-import com.delivery.carteira.utils.auth.Usuario;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,7 +9,6 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.security.oauth2.jwt.Jwt;
 
 import java.time.Instant;
 
