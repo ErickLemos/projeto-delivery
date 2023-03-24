@@ -1,4 +1,4 @@
-package com.delivery.carteira.models.entities;
+package com.delivery.carteira.repositories.entities;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

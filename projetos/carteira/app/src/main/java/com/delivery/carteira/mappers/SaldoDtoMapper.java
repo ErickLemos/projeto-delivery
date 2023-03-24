@@ -1,7 +1,7 @@
 package com.delivery.carteira.mappers;
 
-import com.delivery.carteira.models.dtos.SaldoDto;
-import com.delivery.carteira.models.entities.SaldoEntity;
+import com.delivery.carteira.controllers.dtos.SaldoDto;
+import com.delivery.carteira.repositories.entities.SaldoEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

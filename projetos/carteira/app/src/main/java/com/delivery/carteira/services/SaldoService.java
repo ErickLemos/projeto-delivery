@@ -1,6 +1,6 @@
 package com.delivery.carteira.services;
 
-import com.delivery.carteira.models.entities.SaldoEntity;
+import com.delivery.carteira.repositories.entities.SaldoEntity;
 import com.delivery.carteira.repositories.SaldoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
