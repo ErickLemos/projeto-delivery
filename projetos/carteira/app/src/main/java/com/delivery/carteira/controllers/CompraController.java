@@ -1,7 +1,8 @@
 package com.delivery.carteira.controllers;
 
+import com.delivery.carteira.controllers.dtos.CompraDtoRequest;
+import com.delivery.carteira.controllers.dtos.MensagemDto;
 import com.delivery.carteira.controllers.mappers.CompraDtoMapper;
-import com.delivery.carteira.controllers.dtos.CompraDto;
 import com.delivery.carteira.services.CompraService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -18,15 +19,17 @@ public class CompraController {
     private final CompraService compraService;
 
     @PostMapping
-    public ResponseEntity<CompraDto> adicionarCompra(@RequestBody CompraDto dto) {
+    public ResponseEntity<MensagemDto> adicionarCompra(@RequestBody CompraDtoRequest dto) {
 
         var domain = CompraDtoMapper.INSTANCE.mapFrom(dto);
 
-        var compraSalva = compraService.adicionarCompra(domain);
+        var algo = compraService.adicionarCompra(domain);
 
-        var dtoMapeado = CompraDtoMapper.INSTANCE.mapFrom(compraSalva);
-
-        return ResponseEntity.ok(dtoMapeado);
+        return ResponseEntity.ok(MensagemDto.builder()
+                .titulo("compra realizada")
+                .descricao("sua compra foi realizada com sucesso")
+                .build()
+        );
     }
 
 }

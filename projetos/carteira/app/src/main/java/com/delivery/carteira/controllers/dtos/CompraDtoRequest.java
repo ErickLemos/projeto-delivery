@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class CompraDto {
+public class CompraDtoRequest {
 
     @JsonProperty("valor")
     private String valor;
