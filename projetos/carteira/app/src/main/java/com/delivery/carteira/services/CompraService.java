@@ -21,7 +21,7 @@ public class CompraService {
     private final NaoUtilizarSaldoStrategyImpl naoUtilizarSaldoStrategy;
     private final UtilizarSaldoStrategyImpl utilizarSaldoStrategy;
 
-    public Compra adicionarCompra(Compra compra) {
+    public Compra adicionar(Compra compra) {
 
         var utilizarSaldo = buildUtilizarSaldo(compra.getUtilizarSaldoNoPagamento());
         utilizarSaldo.process(compra);

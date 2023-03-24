@@ -23,7 +23,7 @@ public class CompraController {
 
         var domain = CompraDtoMapper.INSTANCE.mapFrom(dto);
 
-        compraService.adicionarCompra(domain);
+        compraService.adicionar(domain);
 
         return ResponseEntity.ok(MensagemDto.builder()
                 .titulo("compra realizada")
