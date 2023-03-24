@@ -1,4 +1,4 @@
-package com.delivery.carteira.models.dtos;
+package com.delivery.carteira.controllers.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
