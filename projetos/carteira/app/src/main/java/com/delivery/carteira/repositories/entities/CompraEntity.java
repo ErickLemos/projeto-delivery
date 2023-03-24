@@ -1,5 +1,6 @@
 package com.delivery.carteira.repositories.entities;
 
+import com.delivery.carteira.repositories.utils.EntityMetadata;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +15,9 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @AllArgsConstructor
 @Document("compras")
 public class CompraEntity {
+
+    @Field("metadata")
+    private EntityMetadata entityMetadata;
 
     @Id
     private String id;

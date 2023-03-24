@@ -2,7 +2,9 @@ package com.delivery.carteira.services;
 
 import com.delivery.carteira.domain.Compra;
 import com.delivery.carteira.repositories.CompraRepository;
+import com.delivery.carteira.repositories.entities.CompraEntity;
 import com.delivery.carteira.repositories.mappers.CompraEntityMapper;
+import com.delivery.carteira.repositories.utils.EntityMetadata;
 import com.delivery.carteira.services.utilizarsaldo.NaoUtilizarSaldoStrategyImpl;
 import com.delivery.carteira.services.interfaces.UtilizarSaldoStrategy;
 import com.delivery.carteira.services.utilizarsaldo.UtilizarSaldoStrategyImpl;
@@ -25,7 +27,11 @@ public class CompraService {
         utilizarSaldo.process(compra);
 
         var entity = CompraEntityMapper.INSTANCE.mapFrom(compra);
+
+        entity.setEntityMetadata(new EntityMetadata());
         var entitySalva = compraRepository.save(entity);
+
+        var entityDemo = new CompraEntity();
 
         return CompraEntityMapper.INSTANCE.mapFrom(entitySalva);
 

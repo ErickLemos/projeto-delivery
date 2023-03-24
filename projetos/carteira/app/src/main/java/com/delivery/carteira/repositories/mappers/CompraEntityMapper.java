@@ -2,8 +2,8 @@ package com.delivery.carteira.repositories.mappers;
 
 import com.delivery.carteira.domain.Compra;
 import com.delivery.carteira.repositories.entities.CompraEntity;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
+import com.delivery.carteira.repositories.utils.EntityMetadata;
+import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
@@ -22,5 +22,10 @@ public interface CompraEntityMapper {
     @Mapping(target = "metodoDePagamento", source = "metodoDePagamento")
     @Mapping(target = "tipoDeCompra", source = "tipoDeCompra")
     Compra mapFrom(CompraEntity compraEntity);
+
+    @AfterMapping
+    default void after(@MappingTarget CompraEntity compraEntity) {
+        compraEntity.setEntityMetadata(new EntityMetadata());
+    }
 
 }
