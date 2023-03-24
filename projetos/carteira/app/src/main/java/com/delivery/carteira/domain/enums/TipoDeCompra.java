@@ -8,8 +8,7 @@ import java.util.Arrays;
 @Getter
 @RequiredArgsConstructor
 public enum TipoDeCompra {
-    PEDIDO("pedido"),
-    ADICAO_DE_SALDO("adicao_de_saldo");
+    PEDIDO("pedido");
 
     private final String tipo;
 
