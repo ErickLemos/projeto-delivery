@@ -3,10 +3,6 @@
         {
             "name": "projeto",
             "path": "."
-        },
-        {
-            "name": "microservico-carteira",
-            "path": "./projetos/carteira"
         }
     ],
     "extensions": {
@@ -18,9 +14,6 @@
             "ms-vscode-remote.vscode-remote-extensionpack",
             "redhat.vscode-yaml",
             "PKief.material-icon-theme",
-            "vscjava.vscode-java-pack",
-            "vmware.vscode-boot-dev-pack",
-            "vscjava.vscode-spring-boot-dashboard"
         ]
     }
 }
