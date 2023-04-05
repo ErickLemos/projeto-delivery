@@ -15,6 +15,7 @@ public interface CompraEntityMapper {
     @Mapping(target = "valor", source = "valor")
     @Mapping(target = "metodoDePagamento", source = "metodoDePagamento")
     @Mapping(target = "tipoDeCompra", source = "tipoDeCompra")
+    @Mapping(target = "entityMetadata", ignore = true)
     CompraEntity mapFrom(Compra compra);
 
     @Mapping(target = "id", source = "id")

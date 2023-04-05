@@ -16,11 +16,13 @@ public interface CompraDtoMapper {
 
     CompraDtoMapper INSTANCE = Mappers.getMapper(CompraDtoMapper.class);
 
+    @Mapping(target = "id", ignore = true)
     @Mapping(target = "valor", source = "valor")
     @Mapping(target = "metodoDePagamento", source = "metodoDePagamento")
     @Mapping(target = "tipoDeCompra", source = "tipoDeCompra")
     @Mapping(target = "utilizarSaldoNoPagamento", source = "utilizarSaldoNoPagamento")
     Compra mapFrom(CompraDtoRequest compraDtoRequest);
+
 
     @Mapping(target = "valor", source = "valor")
     @Mapping(target = "metodoDePagamento", source = "metodoDePagamento")
