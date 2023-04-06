@@ -1,4 +1,4 @@
-package com.cabradati.monitorable;
+package com.delivery.carteira.core.monitorable;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tag;

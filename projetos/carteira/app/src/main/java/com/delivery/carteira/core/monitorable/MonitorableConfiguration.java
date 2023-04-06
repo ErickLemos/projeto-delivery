@@ -1,4 +1,4 @@
-package com.cabradati.monitorable;
+package com.delivery.carteira.core.monitorable;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

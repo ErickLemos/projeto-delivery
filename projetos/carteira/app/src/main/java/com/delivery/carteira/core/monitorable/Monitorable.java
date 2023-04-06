@@ -1,4 +1,4 @@
-package com.cabradati.monitorable;
+package com.delivery.carteira.core.monitorable;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
