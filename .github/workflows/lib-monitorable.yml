@@ -1,4 +1,4 @@
-name: [LIB] deploy - Monitorable
+name: lib monitorable
 on: [ push ]
 
 jobs:
