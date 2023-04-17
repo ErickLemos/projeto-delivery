@@ -23,6 +23,7 @@ public class CompraService {
 
     public Compra adicionar(Compra compra) {
 
+
         var utilizarSaldo = buildUtilizarSaldo(compra.getUtilizarSaldoNoPagamento());
         utilizarSaldo.process(compra);
 
