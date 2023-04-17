@@ -26,6 +26,7 @@ public class CompraController {
 
         var domain = CompraDtoMapper.INSTANCE.mapFrom(dto);
 
+        // TODO: Refatorar utilizando o Hibernate validation https://www.baeldung.com/javax-validation
         if (domain.getValor().compareTo(BigDecimal.ZERO) < 0){
             throw new CampoInvalidoException(
                     "Compra invalida", "Sua compra precisa ser maior que zero"
