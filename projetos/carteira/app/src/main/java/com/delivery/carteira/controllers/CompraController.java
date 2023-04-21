@@ -20,9 +20,10 @@ public class CompraController {
     private final CompraService compraService;
 
     @PostMapping
-    public ResponseEntity<MensagemDto> adicionarCompra( @Valid @RequestBody CompraDtoRequest dto ) {
+    public ResponseEntity<MensagemDto> adicionarCompra(@Valid @RequestBody CompraDtoRequest dto) {
 
         var domain = CompraDtoMapper.INSTANCE.mapFrom(dto);
+
         compraService.adicionar(domain);
 
         return ResponseEntity.ok(MensagemDto.builder()
