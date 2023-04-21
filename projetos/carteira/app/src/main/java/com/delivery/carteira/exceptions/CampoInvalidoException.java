@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public class CampoInvalidoException extends RuntimeException{
-    private String titulo;
-    private String descricao;
+    private final String titulo;
+    private final String descricao;
 
     public CampoInvalidoException(String titulo, String descricao) {
         this.descricao = descricao;
