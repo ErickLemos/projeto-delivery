@@ -8,9 +8,9 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class MonitorableConfiguration {
 
-    @Bean
-    public MonitorableProfiler monitorableProfiler() {
-        return new MonitorableProfiler();
-    }
+    //@Bean
+    //public MonitorableProfiler monitorableProfiler() {
+    //    return new MonitorableProfiler();
+    //}
 
 }
