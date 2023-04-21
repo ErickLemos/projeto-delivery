@@ -1,6 +1,7 @@
 # Projeto Delivery
 
 ### Ferramentas necessárias:
+
 - Intellij IDEA Community/Ultimate
 - Insommnia
 - Docker

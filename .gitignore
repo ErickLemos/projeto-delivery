@@ -1,3 +1,4 @@
 .idea
+.vscode
 ambientes/tools/sonarqube/data/web
 ambientes/tools/sonarqube/data/es7
