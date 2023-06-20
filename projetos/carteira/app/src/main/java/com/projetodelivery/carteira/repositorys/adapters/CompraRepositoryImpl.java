@@ -1,5 +1,6 @@
 package com.projetodelivery.carteira.repositorys.adapters;
 
+import com.projetodelivery.carteira.core.exceptions.EntidadeNaoEncontradaException;
 import com.projetodelivery.carteira.domain.compra.Compra;
 import com.projetodelivery.carteira.domain.compra.CompraRepository;
 import com.projetodelivery.carteira.repositorys.interfaces.CompraMongoRepository;
@@ -27,8 +28,7 @@ public class CompraRepositoryImpl implements CompraRepository {
     public Compra buscarPorId(String id) {
         return compraMongoRepository.findById(id)
                 .map(CompraEntityMapper.INSTANCE::mapFrom)
-                // TODO: criar exception exclusiva para valores não encontrados
-                .orElseThrow();
+                .orElseThrow(() -> new EntidadeNaoEncontradaException("compra não foi encontrada"));
     }
 
     @Override
