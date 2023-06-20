@@ -1,9 +1,11 @@
 package com.projetodelivery.carteira.rest.controllers;
 
+import com.projetodelivery.carteira.domain.compra.Compra;
 import com.projetodelivery.carteira.domain.compra.commands.AdicionarCompraCommand;
 import com.projetodelivery.carteira.domain.compra.querys.BuscarComprasQuery;
 import com.projetodelivery.carteira.rest.dtos.CompraDto;
-import com.projetodelivery.carteira.rest.dtos.MensagemDto;
+import com.projetodelivery.carteira.rest.utils.DataContainer;
+import com.projetodelivery.carteira.rest.utils.MensagemDto;
 import com.projetodelivery.carteira.rest.mappers.CompraDtoMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +22,7 @@ public class ComprasController {
     private final AdicionarCompraCommand adicionarCompraCommand;
 
     @GetMapping
-    public ResponseEntity<List<CompraDto>> get() {
+    public ResponseEntity<DataContainer<CompraDto>> get() {
 
         var compras = buscarComprasQuery.buscar();
 
@@ -28,7 +30,7 @@ public class ComprasController {
                 .map(CompraDtoMapper.INSTANCE::mapFrom)
                 .toList();
 
-        return ResponseEntity.ok(dtos);
+        return ResponseEntity.ok(DataContainer.of(dtos));
     }
 
 

@@ -1,4 +1,4 @@
-package com.projetodelivery.carteira.rest.dtos;
+package com.projetodelivery.carteira.rest.utils;
 
 import lombok.*;
 
